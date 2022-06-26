@@ -1,4 +1,5 @@
 import Image from "next/image";
+import funnypineapple from "../../public/image/funny-pineapple.webp";
 import pineapple from "../../public/image/pineapple.webp";
 import Link from "next/link";
 
@@ -7,7 +8,10 @@ export default function LogIn() {
   return (
     <>
       <div className="w-full">
-        <div>
+        <div className="sm:hidden">
+          <Image className="-z-10" src={funnypineapple} alt="" />
+        </div>
+        <div className="hidden sm:block">
           <Image className="-z-10" src={pineapple} alt="" />
         </div>
         <div className="rounded-t-[20px] mt-[-80px] bg-white w-full">
@@ -18,7 +22,7 @@ export default function LogIn() {
               </h2>
             </div>
             <div>
-              <form method="post" action="/Menu/Home">
+              <form method="post" action="/Menu">
                 <div className="pt-5 pb-2 space-y-6">
                   <div className="relative border-b-2 focus-within:border-blue-500">
                     <input
@@ -63,7 +67,7 @@ export default function LogIn() {
               </form>
             </div>
             <div className="flex justify-center w-full p-2">
-              <Link href="/Menu/Home">
+              <Link href="/Menu">
                 <a className="text-[20px] text-[#3E3E3E] font-[500] px-[5px] border-[#FCCC66] border-b-2">
                   Skip
                 </a>
